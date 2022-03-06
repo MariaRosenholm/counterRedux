@@ -1,5 +1,5 @@
-export const ADD = "ADD";
-export const REMOVE = "REMOVE";
+export const ADDONE = "ADDONE";
+export const DELETEONE = "DELETEONE";
 export const ADDFIVE = "ADDFIVE";
-export const REMOVEFIVE = "REMOVEFIVE";
+export const DELETEFIVE = "DELETEFIVE";
 export const RESET = "RESET";
