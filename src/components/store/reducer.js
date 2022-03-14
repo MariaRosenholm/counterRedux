@@ -11,41 +11,26 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.ADDONE:
       state.even ? (evenNumber = false) : (evenNumber = true);
-      return {
-        number: action.payload,
-        even: evenNumber,
-      };
+      return { ...state, number: state.number + 1, even: evenNumber };
     case actionTypes.DELETEONE:
       state.even ? (evenNumber = false) : (evenNumber = true);
       if (state.number > 0) {
-        clickedNumber = action.payload;
+        clickedNumber = state.number - 1;
       } else {
         clickedNumber = 0;
       }
-      return {
-        number: clickedNumber,
-        even: evenNumber,
-      };
+      return { ...state, number: clickedNumber, even: evenNumber };
     case actionTypes.ADDFIVE:
-      return {
-        number: action.payload,
-        even: state.even,
-      };
+      return { ...state, number: state.number + 5, even: state.even };
     case actionTypes.DELETEFIVE:
       if (state.number > 4) {
-        clickedNumber = action.payload;
+        clickedNumber = state.number - 5;
       } else {
         clickedNumber = 0;
       }
-      return {
-        number: clickedNumber,
-        even: state.even,
-      };
+      return { ...state, number: clickedNumber, even: state.even };
     case actionTypes.RESET:
-      return {
-        number: action.payload,
-        even: true,
-      };
+      return { ...state, number: 0, even: true };
     default:
       return state;
   }
