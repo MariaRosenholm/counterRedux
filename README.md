@@ -3,4 +3,14 @@
 - Counter app.
 - This is Business College Helsinki school assignment with React and Redux.
 
-## Time spend to build this 4 hours.
+## Build with
+
+- React function components with hooks: useEffect and useState.
+- Redux
+- CSS
+
+## Time spend to build this 5 hours.
+
+## Screenshots
+
+![Screenshot of the application homepage](screenshot.png)
